@@ -1,15 +1,15 @@
 var randomString = 0;
 var divCreated = false;
 // Function to create and display the captcha popup
-function showCaptchaPopup() {
-  // Generate a random string of alphabets and numbers
-  old = randomString;
-  randomString = Math.random().toString(36).slice(-8);
 
-  var captcha = `
-Please enter the captcha ${randomString}: <input type='text' id=captcha-input>
-<input type="submit" value="Submit" />
-`;
+function showCaptchaPopup() {
+
+    // Generate a random string of alphabets and numbers
+    old = randomString;
+    randomString = Math.random().toString(36).slice(-8);
+    
+    var captcha = `Please enter the captcha ${randomString}: <input type='text' id=captcha-input>
+    <input type="submit" value="Submit" />`;
 
   vert = Math.floor(Math.random() * 100);;
   side = Math.floor(Math.random() * 100);;
@@ -34,13 +34,15 @@ Please enter the captcha ${randomString}: <input type='text' id=captcha-input>
         alert("CAPTCHA Passed!");
         document.getElementById("captcha").remove();
     } else {
-        alert("CAPTCHA Failed");
+        alert("Oof...Are you ready for a NEW CAPTCHA?");
     }
   }
   divCreated = true;
+ 
 }
 
-// Show the captcha popup every 10 seconds
+// Show the captcha popup every 6 seconds
 // Will refresh and clear input field if never type quickly enough
-showCaptchaPopup();
-setInterval(showCaptchaPopup, 10000);
+showCaptchaPopup()
+setInterval(showCaptchaPopup, 6000);
+
