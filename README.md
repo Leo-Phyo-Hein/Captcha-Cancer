@@ -20,9 +20,9 @@ While greatly tempted by the siren song of ChatGPT, we built the extension from 
 - None of us could understand the error messages in the browser.
 
 ## Accomplishments that we're proud of
-The browser extension is actually _really_ annoying.
-We managed to incorporate all the features we planned for, even those that we were not sure if it was possible (due to our limited knowledge on JavaScript).
-It's not super spaghetti... right?
+- The browser extension is actually _really_ annoying.
+- We managed to incorporate all the features we planned for, even those that we were not sure if it was possible (due to our limited knowledge on JavaScript).
+- It's not super spaghetti... right?
 
 ## What we learned
 - We have gained some proficiency with JavaScript, Html and CSS - enough to shamelessly put the "JS" icon on our GitHub page.
