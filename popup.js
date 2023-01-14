@@ -1,11 +1,8 @@
-var popupPresent = false;
-
 // Function to create and display the captcha popup
 function showCaptchaPopup() {
 
     // Generate a random string of alphabets and numbers
     var randomString = Math.random().toString(36).slice(-8);
-
 
     // Create the popup element
     var popup = document.createElement("div");
@@ -17,15 +14,20 @@ function showCaptchaPopup() {
     popup.style.left = "50%";
     popup.style.transform = "translate(-50%, -50%)";
     popup.style.zIndex = "1000";
-    popupPresent = true;
     
-    if (!popupPresent) {
     // Add the popup to the page
     document.body.appendChild(popup);
-    }
-}
 
+    userInput = document.getElementById("captcha-input");
+
+    if (userInput === randomString) {
+        alert("CAPTCHA passed!");
+    } else {
+        alert("CAPTCHA failed. Please try again.");
+    };
+}
 
 // Show the captcha popup every 10 seconds
 // Will refresh and clear input field if never type quickly enough
-setInterval(showCaptchaPopup, 5000);
+setInterval(showCaptchaPopup, 10000);
+
