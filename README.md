@@ -1,4 +1,4 @@
-![banner](https://github.com/Leo-Phyo-Hein/Captcha-Cancer-Extension/tree/main/images/banner.png "Captcha Cancer")
+![banner](https://github.com/Leo-Phyo-Hein/Captcha-Cancer-Extension/tree/main/images/captcha-banner.png "Captcha Cancer")
 
 # What is Captcha Cancer?
 A Chromium browser extension that causes Captchas and adverts to pop-up incessantly.
