@@ -32,9 +32,13 @@ function showCaptchaPopup() {
   if (divCreated) {
     if (userInput.value === old) {
         alert("CAPTCHA Passed!");
+        // Removes the captcha when completed correctly
         document.getElementById("captcha").remove();
-    } else {
-        alert("Oof...Are you ready for a NEW CAPTCHA?");
+        document.body.removeChild(popup);
+    } 
+    else {
+      // Displays failure text and an incurable cancer begins to spread...
+      alert("Oof...Are you ready for a NEW CAPTCHA?");
     }
   }
   divCreated = true;
