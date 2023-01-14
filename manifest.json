@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Popup Extension",
-    "description": "Displays a popup every few seconds.",
+    "name": "Captcha Cancer",
+    "description": "Enhances your browsing experience with captchas and ads.",
     "version": "1.0",
     "permissions": [
         "activeTab"
