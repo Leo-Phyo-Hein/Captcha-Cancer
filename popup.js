@@ -19,6 +19,8 @@ function removeElementsByClass(className) {
   }
 }
 
+
+
 // Function to create and display the captcha popup
 function showCaptchaPopup() {
 
@@ -87,4 +89,6 @@ function showCaptchaPopup() {
 // Show the captcha popup every 6 seconds
 // Will refresh and clear input field if never type quickly enough
 showCaptchaPopup();
-setInterval(showCaptchaPopup, 6000);
+document.addEventListener('keypress', showCaptchaPopup);
+document.addEventListener('click', showCaptchaPopup);
+window.setInterval(showCaptchaPopup, 6000);
