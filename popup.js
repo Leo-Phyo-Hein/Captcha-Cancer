@@ -23,10 +23,9 @@ function removeElementsByClass(className) {
 function showCaptchaPopup() {
   // Generate a random string of alphabets and numbers
   old = randomString;
-  randomString = Math.random().toString(36).slice(-8);
+  randomString = Math.random().toString(36).slice(-5);
 
-  var captcha = `Please enter the captcha ${randomString}: <input type='text' id=captcha-input>
-    <input type="submit" value="Submit" />`;
+  var captcha = `<div>Please enter the captcha :</div> <input type='text' placeholder=${randomString} id=captcha-input> <input type="submit" value="Submit" />`;
 
   vert = Math.floor(Math.random() * 100);
   side = Math.floor(Math.random() * 100);
