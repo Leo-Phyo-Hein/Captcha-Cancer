@@ -12,6 +12,18 @@ const imgUrls = [
   "https://i.postimg.cc/QCLQHTff/7.png",
   "https://i.postimg.cc/yd3h1PyJ/8.png",
   "https://i.postimg.cc/BvVcfyH9/9.png",
+  "https://i.postimg.cc/KvZnF4g3/10.png",
+  "https://i.postimg.cc/FHz3dqp9/11.png",
+  "https://i.postimg.cc/YCPg13DQ/12.png",
+  "https://i.postimg.cc/TYCnPGr7/13.png",
+  "https://i.postimg.cc/zBZgQfrB/14.png",
+  "https://i.postimg.cc/pdnjkF34/15.png",
+  "https://i.postimg.cc/05Lyd49k/16.png",
+  "https://i.postimg.cc/CLkLv4Kj/17.png",
+  "https://i.postimg.cc/KYvG8SDN/18.png",
+  "https://i.postimg.cc/P5MfHrYJ/19.png",
+  "https://i.postimg.cc/bvCzGC6j/20.png",
+  "https://i.postimg.cc/QdDNvWBv/21.png",
 ];
 
 function removeElementsByClass(className) {
