@@ -1,4 +1,4 @@
-![banner](https://raw.githubusercontent.com/Leo-Phyo-Hein/Captcha-Cancer-Extension/main/images/captcha-banner.png)
+![banner](https://raw.githubusercontent.com/Leo-Phyo-Hein/Captcha-Cancer-Extension/main/images/banner.png)
 
 # What is Captcha Cancer?
 A Chromium extension that spams the user with captchas and ads.
