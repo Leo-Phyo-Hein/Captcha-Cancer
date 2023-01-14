@@ -6,7 +6,7 @@ function showCaptchaPopup() {
 
     // Create the popup element
     var popup = document.createElement("div");
-    popup.innerHTML = `Please enter the captcha ${randomString}: ` + "<input type='text' id='captcha-input'/>";
+    popup.innerHTML = `Please enter the captcha ${randomString}: ` + "<input type='text' id='captcha-input'/>"
     popup.style.backgroundColor = "red";
     popup.style.padding = "20px";
     popup.style.position = "fixed";
@@ -20,7 +20,7 @@ function showCaptchaPopup() {
 
     userInput = document.getElementById("captcha-input");
 
-    if (userInput === randomString) {
+    if (userInput.value === randomString) {
         alert("CAPTCHA passed!");
     } else {
         alert("CAPTCHA failed. Please try again.");
