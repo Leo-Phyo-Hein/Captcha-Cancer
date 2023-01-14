@@ -1,7 +1,18 @@
 var randomString = 0;
 var divCreated = false;
-// Function to create and display the captcha popup
+const imgUrls = [
+  'https://i.postimg.cc/XNFKtsvm/1.png',
+  'https://i.postimg.cc/52P88GPY/2.png',
+  'https://i.postimg.cc/bN9xwdkR/3.png',
+  'https://i.postimg.cc/YC21GkxB/4.png',
+  'https://i.postimg.cc/rFkGT50m/5.png',
+  'https://i.postimg.cc/1Xpp63Ts/6.png',
+  'https://i.postimg.cc/QCLQHTff/7.png',
+  'https://i.postimg.cc/yd3h1PyJ/8.png',
+  'https://i.postimg.cc/BvVcfyH9/9.png'
+];
 
+// Function to create and display the captcha popup
 function showCaptchaPopup() {
 
     // Generate a random string of alphabets and numbers
@@ -39,6 +50,17 @@ function showCaptchaPopup() {
     else {
       // Displays failure text and an incurable cancer begins to spread...
       alert("Oof...Are you ready for a NEW CAPTCHA?");
+
+      // Random image popups
+      var imgPop = document.createElement("div");
+      var randImg = imgUrls[Math.floor(Math.random() * imgUrls.length)]
+      imgPop.innerHTML = `<img src="${randImg}" />`
+      imgPop.style.padding = "20px";
+      imgPop.style.position = "fixed";
+      imgPop.style.top = (vert+20) + "%";
+      imgPop.style.left = (side-20) + "%";
+      imgPop.style.zIndex = "999";
+      document.body.append(imgPop);
     }
   }
   divCreated = true;
