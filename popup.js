@@ -21,6 +21,7 @@ function removeElementsByClass(className) {
 
 // Function to create and display the captcha popup
 function showCaptchaPopup() {
+
   // Generate a random string of alphabets and numbers
   old = randomString;
   randomString = Math.random().toString(36).slice(-5);
@@ -34,13 +35,22 @@ function showCaptchaPopup() {
   var popup = document.createElement("div");
   popup.innerHTML = captcha;
   popup.setAttribute("id", "captcha");
-  popup.style.backgroundColor = "red";
+  popup.style.backgroundColor = "#ff5252";
   popup.style.padding = "20px";
   popup.style.position = "fixed";
   popup.style.top = vert + "%";
   popup.style.left = side + "%";
   popup.style.transform = "translate(-50%, -50%)";
+  popup.style.caretColor = 'white';
+  popup.style.color = '#fff200';
+  popup.style.fontFamily = 'Verdana,sans-serif';
+  popup.style.fontSize = 'large';
+  popup.style.textDecoration = 'line-through';
+  popup.style.textDecorationStyle = 'wavy';
+  popup.style.textShadow = '"5px 5px 1px #ff0000, 10px 10px 1px #0000ff";';
+  popup.style.boxShadow = "10px 20px 30px #ff000080";
   popup.style.zIndex = "1000";
+  popup.style.userSelect = 'none';
 
   // Add the popup to the page
   document.body.append(popup);
