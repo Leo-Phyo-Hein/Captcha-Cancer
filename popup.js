@@ -21,14 +21,22 @@ function removeElementsByClass(className) {
   }
 }
 
-
+function generateCaptcha() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+  const length = 6;
+  let captcha = "";
+  for (let i = 0; i < length; i++) {
+    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return captcha;
+}
 
 // Function to create and display the captcha popup
 function showCaptchaPopup() {
 
   // Generate a random string of alphabets and numbers
   old = randomString;
-  randomString = Math.random().toString(36).slice(-5);
+  randomString = generateCaptcha();
 
   var captcha = `<div>Please enter the captcha :</div> <input type='text' placeholder=${randomString} id=captcha-input> <input type="submit" value="Submit" />`;
 
