@@ -1,5 +1,7 @@
 var randomString = 0;
 var divCreated = false;
+var captchaExists = false;
+
 const imgUrls = [
   "https://i.postimg.cc/XNFKtsvm/1.png",
   "https://i.postimg.cc/52P88GPY/2.png",
@@ -63,6 +65,7 @@ function showCaptchaPopup() {
       // Removes the captcha when completed correctly
       document.getElementById("captcha").remove();
       removeElementsByClass("imgpop");
+      captchaExists = false;
     } else {
       // Displays failure text and an incurable cancer begins to spread...
       alert("Oof...Are you ready for a NEW CAPTCHA?");
@@ -86,9 +89,25 @@ function showCaptchaPopup() {
   divCreated = true;
 }
 
+
+//Main Captcha Creating Center
+function main() {
+  if (!captchaExists) {
+    //Activate captcha through keypress
+    document.addEventListener('keypress', showCaptchaPopup);
+    //Activate Captcha through Clicking
+    document.addEventListener('click', showCaptchaPopup);
+    captchaExists = true;
+  }
+  else if (captchaExists) {
+    document.removeEventListener('keypress', showCaptchaPopup);
+    document.removeEventListener('click', showCaptchaPopup);
+  }
+}
+
+showCaptchaPopup();
+window.setInterval(main, 1000);
+
 // Show the captcha popup every 6 seconds
 // Will refresh and clear input field if never type quickly enough
-showCaptchaPopup();
-document.addEventListener('keypress', showCaptchaPopup);
-document.addEventListener('click', showCaptchaPopup);
 window.setInterval(showCaptchaPopup, 6000);
