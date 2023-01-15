@@ -50,13 +50,17 @@ function showCaptchaPopup() {
   old = randomString;
   randomString = generateCaptcha();
 
-  var captcha = `<div>Please enter the captcha :</div> <input type='text' placeholder=${randomString} id=captcha-input> <input type="submit" value="Submit" />`;
+  var captcha = `<form>
+  <label for="captcha-input">Please enter the captcha :</label> 
+  <input type='text' placeholder=${randomString} id=captcha-input> 
+  <input type="reset" value="Submit" id=submit-button/>
+  </form>`;
 
   vert = Math.floor(Math.random() * 100);
   side = Math.floor(Math.random() * 100);
 
   // Create the popup element
-  var popup = document.createElement("div");
+  var popup = document.createElement("form");
   popup.innerHTML = captcha;
   popup.setAttribute("id", "captcha");
   popup.style.backgroundColor = "#ff5252";
@@ -79,7 +83,9 @@ function showCaptchaPopup() {
   // Add the popup to the page
   document.body.append(popup);
   userInput = document.getElementById("captcha-input");
+
   if (divCreated) {
+
     if (userInput.value === old) {
       alert("CAPTCHA Passed!");
       // Removes the captcha when completed correctly
