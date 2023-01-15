@@ -1,7 +1,7 @@
 ![banner](https://raw.githubusercontent.com/Leo-Phyo-Hein/Captcha-Cancer-Extension/main/images/banner.png)
 
 # What is Captcha Cancer?
-A Chromium extension that spams the user with captchas and ads.
+A Chromium extension that spams the user with captchas and ads. [Watch the demo here.](https://youtu.be/pETI03u3nBo)
 
 ## Inspiration
 Our team wanted to build something that would interfere with productivity and make a mess out of someone's lovely computer. We started brainstorming and realised... Almost everyone has Adblock installed on their computers to eliminate those myriad ads which clutter screens to death.
