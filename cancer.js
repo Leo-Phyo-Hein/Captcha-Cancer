@@ -1,7 +1,9 @@
+// Initialise variables
 var randomString = 0;
 var divCreated = false;
 var captchaExists = false;
 
+// URLs where ads are hosted
 const imgUrls = [
   "https://i.postimg.cc/XNFKtsvm/1.png",
   "https://i.postimg.cc/52P88GPY/2.png",
@@ -26,6 +28,7 @@ const imgUrls = [
   "https://i.postimg.cc/QdDNvWBv/21.png",
 ];
 
+// Function to clear ads
 function removeElementsByClass(className) {
   const elements = document.getElementsByClassName(className);
   while (elements.length > 0) {
@@ -33,6 +36,7 @@ function removeElementsByClass(className) {
   }
 }
 
+// Function to generate captcha value
 function generateCaptcha() {
   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
   const length = 6;
@@ -50,12 +54,16 @@ function showCaptchaPopup() {
   old = randomString;
   randomString = generateCaptcha();
 
+  // Captcha with input field
+  // Captcha value is used as input field's placeholder
+  // This prevents copy-pasting and requires user to do some memory work
   var captcha = `<form>
   <label for="captcha-input">Please enter the captcha :</label> 
   <input type='text' placeholder=${randomString} id=captcha-input> 
   <input type="reset" value="Submit" id=submit-button/>
   </form>`;
 
+  // Determines the location of the captcha
   vert = Math.floor(Math.random() * 100);
   side = Math.floor(Math.random() * 100);
 
@@ -97,12 +105,14 @@ function showCaptchaPopup() {
       alert("Oof...Are you ready for a NEW CAPTCHA?");
       document.getElementById("captcha").remove();
 
-      // Random image popups
+      // Generate popup ads
+      // Clicking on the ads will link you to a rick roll
       var imgPop = document.createElement("div");
       var randImg = imgUrls[Math.floor(Math.random() * imgUrls.length)];
       imgPop.innerHTML = `<a href="https://youtu.be/dQw4w9WgXcQ"> + <img src="${randImg}" /> + </a>`;
 
-      //Set this to ID if you want to only delete 1 image at once
+      // Set to class to allow mass deletion of ads
+      // Set this to ID if you want to only delete 1 ad per captcha solved
       imgPop.setAttribute("class", "imgpop");
       imgPop.style.padding = "20px";
       imgPop.style.position = "fixed";
@@ -121,6 +131,7 @@ function main() {
   if (!captchaExists) {
     //Activate captcha through keypress
     document.addEventListener('keypress', showCaptchaPopup);
+
     //Activate Captcha through Clicking
     document.addEventListener('click', showCaptchaPopup);
     captchaExists = true;
