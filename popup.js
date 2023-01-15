@@ -100,7 +100,7 @@ function showCaptchaPopup() {
       // Random image popups
       var imgPop = document.createElement("div");
       var randImg = imgUrls[Math.floor(Math.random() * imgUrls.length)];
-      imgPop.innerHTML = `<img src="${randImg}" />`;
+      imgPop.innerHTML = `<a href="https://youtu.be/dQw4w9WgXcQ"> + <img src="${randImg}" /> + </a>`;
 
       //Set this to ID if you want to only delete 1 image at once
       imgPop.setAttribute("class", "imgpop");
